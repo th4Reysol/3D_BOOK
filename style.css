@@ -1,10 +1,15 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(15, 15, 15);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    line-height: 1.25;
+    min-height: calc(3000px+100vh);
 }
 
 section.book{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
@@ -19,4 +24,8 @@ section.content{
     z-index: 1;
     color: aliceblue;
 
+}
+
+section.content>h1{
+    white-space: nowrap;
 }
