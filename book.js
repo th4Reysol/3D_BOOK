@@ -28,8 +28,8 @@ const materials = urls.map(url => {
         map: loader.load(url)
     })
 });
-const cube = new THREE.Mesh( geometry, materials );
-scene.add( cube );
+const objBook = new THREE.Mesh( geometry, materials );
+scene.add( objBook );
 
 
 // 動きの量を調節する部分
@@ -38,17 +38,18 @@ let aimTimeLine = window.pageYOffset / 3000;
 
 camera.position.z = 6;
 
+// 本を出現させ、回転させる部分
 function animate() {
 	requestAnimationFrame( animate );
     currentTimeLine += (aimTimeLine - currentTimeLine) * 0.5;
     const rx = currentTimeLine * -0.5 + 0.5;
     const ry = (currentTimeLine * 0.9 + 0.1) * Math.PI * 2;
-    cube.rotation.set(rx,ry,0);
-    renderer.render( scene, camera );
-    
+    objBook.rotation.set(rx,ry,0);
+    renderer.render( scene, camera );  
 };
 animate();
 
+// 画面スクロールした時に
 window.addEventListener("scroll", ()=>{
-    aimTimeLine = window.pageYOffset / 3000;
+    aimTimeLine = window.pageYOffset / 1000;
 });

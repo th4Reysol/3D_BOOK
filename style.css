@@ -25,7 +25,11 @@ section.content{
     color: aliceblue;
 
 }
-
+/* 目一杯スペースを取る */
 section.content>h1{
     white-space: nowrap;
+}
+
+section.content>a{
+    color: orange;
 }
