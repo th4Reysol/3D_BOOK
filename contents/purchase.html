@@ -19,16 +19,18 @@
     <div class="purchase">
         <dl>
             <dt>Name</dt>
-            <dd><input type="text" placeholder="TH168" name="Name"></dd>
+            <dd><input type="text" placeholder="TH168" id="csName"></dd>
         </dl>
         <dl>
             <dt>Address</dt>
-            <dd><input type="text" placeholder="provide your address"></dd>
+            <dd><input type="text" placeholder="provide your address" id="csAddress"></dd>
         </dl>
         <dl>
             <dt>Quantity</dt>
-            <dd><input type="text"></dd>
+            <dd><input type="text" id="csQuantity"></dd>
         </dl>
+        <button id="order" onclick="validateData()">Order</button>
+        <button id="cancel">Cancel</button>
     </div>
     <script src="script_2.js"></script>
 </body>

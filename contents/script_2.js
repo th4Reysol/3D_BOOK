@@ -32,4 +32,22 @@ for (let i = 0; i < fadeIns_Even.length; i++){
     })
 };
 
+// チェック部分
+function validateData(){
+    let csName = document.getElementById("csName");
+    let csAddress = document.getElementById("csAddress");
+    let csQuantity = document.getElementById("csQuantity");
+
+    if(csName==""){
+        window.alert("Provide Your Name.");
+    }else if(csAddress==""){
+        window.alert("Provide Your Address.");
+    }else if(isNaN(csQuantity)){
+        location.href = "./outcome/order.html";
+    }else{
+        window.alert("Provide Quantity.");
+    }
+
+}
+
 

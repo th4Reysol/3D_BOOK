@@ -16,7 +16,7 @@ const ambient = new THREE.AmbientLight(0x222222);
 scene.add(ambient);
 
 const light = new THREE.DirectionalLight(0xffffff);
-light.position.set(0,0,6);
+light.position.set(0,0,4);
 scene.add(light);
 
 const loader = new THREE.TextureLoader();
@@ -34,13 +34,13 @@ const materials = urls.map(url => {
     })
 });
 const objBook = new THREE.Mesh( geometry, materials );
+objBook.position.set(2,0,1);
 scene.add( objBook );
 
 
 // 動きの量を調節する部分
 let currentTimeLine = window.pageYOffset / 3000;
 let aimTimeLine = window.pageYOffset / 3000;
-
 camera.position.z = 6;
 
 // 本を出現させ、回転させる部分
@@ -48,7 +48,7 @@ function animate() {
 	requestAnimationFrame( animate );
     currentTimeLine += (aimTimeLine - currentTimeLine) * 0.5;
     const rx = currentTimeLine * -0.5 + 0.5;
-    const ry = (currentTimeLine * 0.9 + 0.1) * Math.PI * 2;
+    const ry = (currentTimeLine * 0.5+1) * Math.PI *2;
     objBook.rotation.set(rx,ry,0);
     renderer.render( scene, camera );  
 };

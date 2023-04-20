@@ -129,3 +129,19 @@ dt,dd{
 dd>input{
     margin-left: 15px;
 }
+button#order{
+    margin-top: 45px;
+    margin-left: 80px;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: orange;
+}
+button#cancel{
+    margin-top: 45px;
+    margin-left: 80px;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: orange;
+}
